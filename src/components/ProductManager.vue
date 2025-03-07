@@ -4,11 +4,11 @@ import ProductExport from './ProductExport.vue';
 import ProductForm from './ProductForm.vue';
 import ProductList from './ProductList.vue';
 import ProductSearch from './ProductSearch.vue';
-import { type Product } from '../scripts/product';
+import { type Product, defaultProductList } from '../scripts/product';
 import { ref, watch } from 'vue';
 
-const products = ref<Product[]>([])
-let nextId = 1
+const products = ref<Product[]>(defaultProductList)
+let nextId = defaultProductList.length + 1
 
 const formProduct = ref<Product | null>(null)
 const detailProduct = ref<Product | null>(null)
@@ -89,7 +89,7 @@ watch(products, newProducts => {
     <div class="container-fluid main bg-dark text-light" data-bs-theme="dark">
         <h1 class="text-center mx-auto">
             <img src="/src/assets/images/shopping_cart.png" alt="Logo" style="width: 100px;height: 100px;filter: invert(100%);">
-            Gestionnaire de produit</h1>
+            Gestionnaire de produits</h1>
         <div class="row">
             <div class="col">
                 <ProductSearch @search-products="searchProducts" />

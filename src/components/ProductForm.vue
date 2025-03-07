@@ -99,9 +99,9 @@ const emit = defineEmits(['addProduct', 'modifyProduct', 'cancelModify'])
                 <span class="input-group-text">Stock</span>
                 <input type="number" class="form-control" v-model="productStock">
             </div>
-            <button v-if="!isModifying" type="button" class="btn btn-success" :disabled="isSubmitDisabled" @click="addProduct">Ajouter</button>
-            <button v-if="isModifying" type="button" class="btn btn-warning" :disabled="isSubmitDisabled" @click="modifiyProduct">Modifier</button>
-            <button v-if="isModifying" type="button" class="btn btn-danger" @click="cancelModify">Annuler</button>
+            <button v-if="!isModifying" type="button" class="btn btn-success mx-1" :disabled="isSubmitDisabled" @click="addProduct">Ajouter</button>
+            <button v-if="isModifying" type="button" class="btn btn-warning mx-1" :disabled="isSubmitDisabled" @click="modifiyProduct">Modifier</button>
+            <button v-if="isModifying" type="button" class="btn btn-danger mx-1" @click="cancelModify">Annuler</button>
         </form>
     </div>
 </template>

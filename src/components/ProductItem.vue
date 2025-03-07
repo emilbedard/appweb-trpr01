@@ -23,11 +23,11 @@ const emit = defineEmits(['modifiyProduct', 'deleteProduct', 'duplicateProduct',
 <template>
     <div class="col">
         <p>
-            <span v-if="product.stock == 0" class="text-white bg-danger rounded"><b>{{ "<!>" }}</b></span>
-            <button type="button" class="btn btn-body border border-secondary" @click="detailProduct">{{ product.name }}</button>
-            <button type="button" class="btn btn-warning" @click="modifyProduct">Modifier</button>
-            <button type="button" class="btn btn-danger" @click="deleteProduct">Supprimer</button>
-            <button type="button" class="btn btn-primary" @click="duplicateProduct">Dupliquer</button>
+            <button v-if="product.stock == 0" class="text-white bg-danger border-0 rounded py-1 px-3 mx-1"><b>!</b></button>
+            <button type="button" class="btn btn-body border border-secondary mx-1" @click="detailProduct">{{ product.name }}</button>
+            <button type="button" class="btn btn-warning mx-1" @click="modifyProduct">Modifier</button>
+            <button type="button" class="btn btn-danger mx-1" @click="deleteProduct">Supprimer</button>
+            <button type="button" class="btn btn-primary mx-1" @click="duplicateProduct">Dupliquer</button>
         </p>
     </div>
 </template>
