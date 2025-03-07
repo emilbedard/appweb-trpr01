@@ -88,7 +88,7 @@ watch(products, newProducts => {
 <template>
     <div class="container-fluid main bg-dark text-light" data-bs-theme="dark">
         <h1 class="text-center mx-auto">
-            <img src="../assets/shopping_cart.png" alt="Logo" style="width: 100px;height: 100px;filter: invert(100%);">
+            <img src="/src/assets/images/shopping_cart.png" alt="Logo" style="width: 100px;height: 100px;filter: invert(100%);">
             Gestionnaire de produit</h1>
         <div class="row">
             <div class="col">
